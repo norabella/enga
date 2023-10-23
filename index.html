@@ -12,15 +12,20 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
-		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-DTY86WTB0K"></script>
 		<script>
 		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
+		function gtag(){dataLayer.push(arguments); }
+		gtag('consent', 'default', {
+		ad_storage: 'denied',
+		analytics_storage: 'denied'
+		});
+		gtag('set', 'ads_data_redaction', true);
 		gtag('js', new Date());
-
 		gtag('config', 'G-DTY86WTB0K');
 		</script>
+	
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-DTY86WTB0K"></script>
 
 	</head>
 	<body class="is-preload">
