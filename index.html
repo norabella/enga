@@ -10,40 +10,47 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/consent.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
-	
-
 		<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments); }
-		gtag('consent', 'default', {
-		ad_storage: 'denied',
-		analytics_storage: 'denied'
-		});
-		gtag('set', 'ads_data_redaction', true);
-		gtag('js', new Date());
-		gtag('config', 'G-DTY86WTB0K');
-		</script>
+			// Define dataLayer and the gtag function.
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
 
-		<!-- Google Tag Manager -->
-		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-		})(window,document,'script','dataLayer','GTM-PJT8WWRM');</script>
-		<!-- End Google Tag Manager -->
-	
+			// Set default consent to 'denied' as a placeholder
+			// Determine actual values based on your own requirements
+			gtag('consent', 'default', {
+				'ad_storage': 'denied',
+				'ad_user_data': 'denied',
+				'ad_personalization': 'denied',
+				'analytics_storage': 'denied'
+			});
+		</script>
 		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-DTY86WTB0K"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+
+			gtag('js', new Date());
+			gtag('config', 'G-DTY86WTB0K');
+		</script>
+		
 
 	</head>
 	<body class="is-preload">
 
-		<!-- Google Tag Manager (noscript) -->
-		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PJT8WWRM"
-		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-		<!-- End Google Tag Manager (noscript) -->
+		<div id="consent_modal" class="consent_hidden" data-role="cookieconsent">
+			<h2>About COOKIES</h2>
+			<p>This site uses <b>two types of cookies</b>: <u>analytical</u> and those needed for this
+				dialog to work. <u>Google Analytics</u> helps me understand how users interact with the site
+				and what I can improve.</p>
+			<ul class="actions">
+				<button id="accept-necessary">Reject Analytics</button>
+				<button id="accept-all" class="primary">Accept All</button>
+			</ul>
+		</div>
 
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -184,5 +191,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/gtag-cookieconsent.js"></script>
 	</body>
 </html>

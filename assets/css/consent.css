@@ -1,0 +1,15 @@
+#consent_modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #3a3a3a;
+    padding: 30px;
+    border-radius: 20px;
+    z-index: 101;
+    width: 80%;
+    max-width: 720px;
+}
+.consent_hidden {
+    display: none;
+}
