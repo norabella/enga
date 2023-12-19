@@ -61,7 +61,7 @@ const  removeCookiesStartingWith = (prefix) => {
     for (let i = 0; i < cookies.length; i++) {
         let cookie = cookies[i].trim();
         if (cookie.indexOf(prefix) === 0) {
-            document.cookie = cookie.split('=')[0] + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+            document.cookie = cookie.split('=')[0] + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;domain=.' +window.location.host+ ';';
         }
     }
 }
